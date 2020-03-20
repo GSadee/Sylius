@@ -186,6 +186,14 @@ final class ManagingShippingMethodsContext implements Context
     }
 
     /**
+     * @When I archive the :shippingMethod shipping method
+     */
+    public function iArchiveTheShippingMethod(ShippingMethodInterface $shippingMethod): void
+    {
+        
+    }
+
+    /**
      * @Then I should see :count shipping methods in the list
      */
     public function iShouldSeeShippingMethodsInTheList(int $count): void
