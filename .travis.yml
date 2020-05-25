@@ -2,6 +2,9 @@ language: php
 
 dist: trusty
 
+import:
+    - source: etc/notification-slack.yml
+
 sudo: false
 
 env:
@@ -17,7 +20,7 @@ addons:
 
 matrix:
     include:
-        -   
+        -
             php: 7.3
             env:
                 - SYLIUS_SUITE="application"
@@ -25,7 +28,7 @@ matrix:
             services:
                 - memcached
                 - mysql
-        -   
+        -
             php: 7.3
             env:
                 - SYLIUS_SUITE="docs packages"

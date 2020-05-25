@@ -1,0 +1,9 @@
+notifications:
+    slack:
+        rooms:
+            secure: TmE9EKWNtqeNYz9TiKWCwPElJV9wsTqQAuiYDmRHK0uZDFhyQIsUkpgJplaE+SfBr7AeJTuklfFQZ7LjcTZy3O6JR4sUwJhOxfZA533Rqs0ppO9vVS5+QEhbWSmB0IobEg95YYkzRWOEpQEZGa2VCCr7ysZGxyKddbiUhyR0XkBXsFHswDzlEz/lSHjj77r7GAHrkAi3Z14JbEtMkrkT6Ga2RkR7SgkpNmoVdVhn99klPyVBB2nbj9neP372Fb2nMOF7b81R0Ryn8xzuIhHbP/AjBbzpeCNmzTEy9Zv9jjDjtMbNtC/95lMiKjb3LQ647T53lrI4vaWRNIPpuLn011ZrqLDKnjLu0oA6Zc3YKuGZCqbRigQeWpCB1u/nEhRoHbJylcozBJpuEQkUamGLX4A0d8wZqUlcj/EQdbkABPBc8oBXwDBjE3adtmHqvJ0PXpTvfhLEOkFh959i5RiOMXBNlWdU+xHUDosLxgMTE8w2OJO3Ag3FtUJH0ZUXupSthBbo8UVWR4FjOr8qq5GWArGHkUJ4JKjBMqJDWpIOzprBjB7u9Z40GQ7djluyT4qQdVnLgIh3WpxzLzJodK6ZefbcJOB7U7epmNbON2HhdPqhEYw0Csn4v1bw3CDOXeZCJROeCuODuPEzerop1eM/ts87mxsFk7Xw3rnJYcpw8HM=
+        on_success: always
+        on_error: always
+        template:
+            - "Cron build on `%{branch}` branch of *%{repository_slug}* has failed :sadbono:"
+            - "Check out <%{build_url}|this URL> and fix it!"
