@@ -30,7 +30,8 @@
     "require": {
         "php": "^7.3",
         "stof/doctrine-extensions-bundle": "^1.4",
-        "sylius/resource-bundle": "^1.6",
+
+"sylius/resource-bundle": "v1.7.0-BETA.3",
         "sylius/taxonomy": "^1.6",
         "symfony/framework-bundle": "^4.4"
     },
