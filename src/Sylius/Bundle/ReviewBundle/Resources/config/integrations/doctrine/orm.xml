@@ -15,9 +15,9 @@
     <services>
         <defaults public="true" />
 
-        <service id="sylius.doctrine.orm.event_subscriber.load_metadata.review" class="Sylius\Bundle\ReviewBundle\Doctrine\ORM\Subscriber\LoadMetadataSubscriber">
-            <argument>%sylius.review.subjects%</argument>
-            <tag name="doctrine.event_subscriber" />
-        </service>
+<!--        <service id="sylius.doctrine.orm.event_subscriber.load_metadata.review" class="Sylius\Bundle\ReviewBundle\Doctrine\ORM\Subscriber\LoadMetadataSubscriber">-->
+<!--            <argument>%sylius.review.subjects%</argument>-->
+<!--            <tag name="doctrine.event_subscriber" />-->
+<!--        </service>-->
     </services>
 </container>
