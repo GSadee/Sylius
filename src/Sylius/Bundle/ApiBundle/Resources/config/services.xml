@@ -15,9 +15,9 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
 >
-    <imports>
-        <import resource="services/**/*.xml" />
-    </imports>
+<!--    <imports>-->
+<!--        <import resource="services/**/*.xml" />-->
+<!--    </imports>-->
 
     <parameters>
         <parameter key="sylius.model.address.interface">Sylius\Component\Addressing\Model\AddressInterface</parameter>
@@ -98,10 +98,10 @@
             <argument type="service" id="Sylius\Bundle\CoreBundle\CatalogPromotion\Processor\CatalogPromotionRemovalProcessorInterface" />
         </service>
 
-        <service id="Sylius\Bundle\ApiBundle\DataProvider\ChannelAwareItemDataProvider" decorates="api_platform.item_data_provider">
-            <argument type="service" id="Sylius\Bundle\ApiBundle\DataProvider\ChannelAwareItemDataProvider.inner" />
-            <argument type="service" id="sylius.context.channel" />
-        </service>
+<!--        <service id="Sylius\Bundle\ApiBundle\DataProvider\ChannelAwareItemDataProvider" decorates="api_platform.item_data_provider">-->
+<!--            <argument type="service" id="Sylius\Bundle\ApiBundle\DataProvider\ChannelAwareItemDataProvider.inner" />-->
+<!--            <argument type="service" id="sylius.context.channel" />-->
+<!--        </service>-->
 
         <service id="Sylius\Bundle\ApiBundle\SectionResolver\AdminApiUriBasedSectionResolver">
             <argument>%sylius.security.new_api_admin_route%</argument>
@@ -143,16 +143,16 @@
 
         <service id="Sylius\Bundle\ApiBundle\ApiPlatform\Metadata\Merger\LegacyResourceMetadataMerger" />
 
-        <service
-            id="api_platform.metadata.resource.metadata_factory.yaml"
-            class="Sylius\Bundle\ApiBundle\ApiPlatform\Factory\MergingExtractorResourceMetadataFactory"
-            decorates="api_platform.metadata.resource.metadata_factory"
-            decoration-priority="40"
-        >
-            <argument type="service" id="api_platform.metadata.extractor.yaml" />
-            <argument type="service" id="api_platform.metadata.resource.metadata_factory.yaml.inner" />
-            <argument type="service" id="Sylius\Bundle\ApiBundle\ApiPlatform\ResourceMetadataPropertyValueResolver" />
-        </service>
+<!--        <service-->
+<!--            id="api_platform.metadata.resource.metadata_factory.yaml"-->
+<!--            class="Sylius\Bundle\ApiBundle\ApiPlatform\Factory\MergingExtractorResourceMetadataFactory"-->
+<!--            decorates="api_platform.metadata.resource.metadata_factory"-->
+<!--            decoration-priority="40"-->
+<!--        >-->
+<!--            <argument type="service" id="api_platform.metadata.extractor.yaml" />-->
+<!--            <argument type="service" id="api_platform.metadata.resource.metadata_factory.yaml.inner" />-->
+<!--            <argument type="service" id="Sylius\Bundle\ApiBundle\ApiPlatform\ResourceMetadataPropertyValueResolver" />-->
+<!--        </service>-->
 
         <service id="Sylius\Bundle\ApiBundle\Mapper\AddressMapperInterface" class="Sylius\Bundle\ApiBundle\Mapper\AddressMapper" public="true"/>
 

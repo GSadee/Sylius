@@ -30,6 +30,7 @@ sylius_api:
                     shop_get: ~
 
 api_platform:
+    metadata_backward_compatibility_layer: false
     patch_formats:
         json: ['application/merge-patch+json']
     path_segment_name_generator: api_platform.path_segment_name_generator.dash
