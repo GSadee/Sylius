@@ -72,7 +72,7 @@ Feature: Shipping method validation
         And I try to save my changes
         Then I should be notified that the zone is required
 
-    @ui @javascript @api
+    @ui @mink:chromedriver @api
     Scenario: Adding a new shipping method with order total greater than or equal rule that contains invalid data
         When I want to create a new shipping method
         And I specify its code as "FED_EX_CARRIER"
@@ -86,7 +86,7 @@ Feature: Shipping method validation
         Then I should be notified that the weight rule has an invalid configuration
         And the shipping method "FedEx Carrier" should not appear in the registry
 
-    @ui @javascript @api
+    @ui @mink:chromedriver @api
     Scenario: Adding a new shipping method with order total less than or equal rule that contains invalid data
         When I want to create a new shipping method
         And I specify its code as "FED_EX_CARRIER"
