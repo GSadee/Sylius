@@ -94,7 +94,7 @@ Feature: Validating a catalog promotion creation
         Then I should be notified that type of action is invalid
         And there should be an empty list of catalog promotions
 
-    @api @ui @mink:chromedriver
+    @api @ui @javascript
     Scenario: Trying to create a catalog promotion with not configured percentage discount action
         When I want to create a new catalog promotion
         And I specify its code as "winter_sale"
@@ -108,7 +108,7 @@ Feature: Validating a catalog promotion creation
         Then I should be notified that the percentage amount should be a number and cannot be empty
         And there should be an empty list of catalog promotions
 
-    @api @ui @mink:chromedriver
+    @api @ui @javascript
     Scenario: Trying to create a catalog promotion with wrong amount of percentage discount action
         When I want to create a new catalog promotion
         And I specify its code as "winter_sale"
@@ -122,7 +122,7 @@ Feature: Validating a catalog promotion creation
         Then I should be notified that a discount amount should be between 0% and 100%
         And there should be an empty list of catalog promotions
 
-    @api @ui @mink:chromedriver
+    @api @ui @javascript
     Scenario: Trying to create a catalog promotion with wrong value of percentage discount action
         When I want to create a new catalog promotion
         And I specify its code as "winter_sale"
@@ -133,7 +133,7 @@ Feature: Validating a catalog promotion creation
         Then I should be notified that the percentage amount should be a number and cannot be empty
         And there should be an empty list of catalog promotions
 
-    @api @ui @mink:chromedriver
+    @api @ui @javascript
     Scenario: Trying to create a catalog promotion with not configured fixed discount action
         When I want to create a new catalog promotion
         And I specify its code as "winter_sale"
