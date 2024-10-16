@@ -207,7 +207,16 @@ jobs:
                 run: vendor/bin/behat features/product --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
 
             -   name: Run Behat (Chromedriver)
-                run: vendor/bin/behat features/promotion --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+                run: vendor/bin/behat features/promotion/applying_catalog_promotions --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/promotion/managing_catalog_promotions --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/promotion/managing_coupons --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/promotion/managing_promotions --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
 
             -   name: Run Behat (Chromedriver)
                 run: vendor/bin/behat features/shipping --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
