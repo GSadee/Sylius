@@ -216,9 +216,6 @@ jobs:
                 run: vendor/bin/behat features/promotion/managing_coupons --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
 
             -   name: Run Behat (Chromedriver)
-                run: vendor/bin/behat features/promotion/managing_promotions --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
-
-            -   name: Run Behat (Chromedriver)
                 run: vendor/bin/behat features/shipping --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
 
             -   name: Run Behat (Chromedriver)
@@ -229,6 +226,9 @@ jobs:
 
             -   name: Run Behat (Chromedriver)
                 run: vendor/bin/behat features/user --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/promotion/managing_promotions --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
 
             -   name: Upload logs
                 uses: actions/upload-artifact@v3
