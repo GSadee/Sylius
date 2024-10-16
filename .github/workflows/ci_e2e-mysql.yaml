@@ -183,7 +183,43 @@ jobs:
                     chrome_version: stable
 
             -   name: Run Behat (Chromedriver)
-                run: vendor/bin/behat --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui" || vendor/bin/behat --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui" --rerun || vendor/bin/behat --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui" --rerun
+                run: vendor/bin/behat features/addressing --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/admin --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/channel --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/checkout --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/currency --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/order --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/payment --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/product --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/promotion --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/shipping --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/taxation --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/taxonomy --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
+
+            -   name: Run Behat (Chromedriver)
+                run: vendor/bin/behat features/user --colors --strict --no-interaction -vvv -f progress --tags="@mink:chromedriver&&~@todo&&~@cli" --suite-tags="@ui"
 
             -   name: Upload logs
                 uses: actions/upload-artifact@v3
