@@ -39,13 +39,6 @@
           "api-platform": "^2.7.10",
           "mysql": "8.0",
           "twig": "^2.12"
-        },
-        {
-          "php": "8.3",
-          "symfony": "^6.4",
-          "api-platform": "^2.7.10",
-          "mysql": "8.4",
-          "twig": "^3.3"
         }
       ]
     },
