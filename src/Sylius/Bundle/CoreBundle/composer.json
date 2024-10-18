@@ -28,7 +28,7 @@
     "require": {
         "php": "^8.2",
         "doctrine/doctrine-migrations-bundle": "^3.0.1",
-        "egulias/email-validator": "^3.1",
+        "egulias/email-validator": "^4.0",
         "fakerphp/faker": "^1.10",
         "knplabs/gaufrette": "^0.10 || ^0.11",
         "knplabs/knp-gaufrette-bundle": "^0.8 || ^0.9",
@@ -61,24 +61,24 @@
         "sylius/taxation-bundle": "^2.0",
         "sylius/taxonomy-bundle": "^2.0",
         "sylius/user-bundle": "^2.0",
-        "symfony/clock": "^6.4.0 || ^7.1",
+        "symfony/clock": "^6.4 || ^7.1",
         "symfony/framework-bundle": "^6.4.1 || ^7.1",
-        "symfony/intl": "^6.4.0 || ^7.1",
-        "symfony/mailer": "^6.4.0 || ^7.1",
-        "symfony/messenger": "^6.4.0 || ^7.1",
+        "symfony/intl": "^6.4 || ^7.1",
+        "symfony/mailer": "^6.4 || ^7.1",
+        "symfony/messenger": "^6.4 || ^7.1",
         "symfony/webpack-encore-bundle": "^2.1",
-        "symfony/workflow": "^6.4.0 || ^7.1"
+        "symfony/workflow": "^6.4 || ^7.1"
     },
     "require-dev": {
-        "doctrine/doctrine-bundle": "^2.3.1",
+        "doctrine/doctrine-bundle": "^2.13",
         "hwi/oauth-bundle": "^1.1 || ^2.0@beta",
         "matthiasnoback/symfony-config-test": "^5.1",
         "matthiasnoback/symfony-dependency-injection-test": "^5.1",
-        "phpspec/phpspec": "^7.2",
-        "phpspec/prophecy-phpunit": "^2.0",
+        "phpspec/phpspec": "^7.5",
+        "phpspec/prophecy-phpunit": "^2.2",
         "phpunit/phpunit": "^9.5",
         "symfony/dependency-injection": "^6.4.1 || ^7.1",
-        "symfony/dotenv": "^6.4.0 || ^7.1"
+        "symfony/dotenv": "^6.4 || ^7.1"
     },
     "config": {
         "allow-plugins": {
