@@ -40,7 +40,6 @@
         "php": "^8.2",
         "doctrine/orm": "^2.18",
         "egulias/email-validator": "^4.0",
-        "sylius/mailer-bundle": "^2.1",
         "sylius/resource-bundle": "^1.12",
         "sylius/user": "^2.0",
         "symfony/framework-bundle": "^6.4.1 || ^7.1",
@@ -54,8 +53,7 @@
         "phpspec/phpspec": "^7.5",
         "phpunit/phpunit": "^9.5",
         "symfony/dependency-injection": "^6.4.1 || ^7.1",
-        "symfony/security-bundle": "^6.4 || ^7.1",
-        "symfony/mailer": "^6.4 || ^7.1"
+        "symfony/security-bundle": "^6.4 || ^7.1"
     },
     "suggest": {
         "hwi/oauth-bundle": "For OAuth integration"
