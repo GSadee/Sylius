@@ -24,7 +24,6 @@ class AppKernel extends Kernel
             new BabDev\PagerfantaBundle\BabDevPagerfantaBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sylius\Bundle\UserBundle\SyliusUserBundle(),
-            new Sylius\Bundle\MailerBundle\SyliusMailerBundle(),
             new Sylius\Bundle\ReviewBundle\SyliusReviewBundle(),
             new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
