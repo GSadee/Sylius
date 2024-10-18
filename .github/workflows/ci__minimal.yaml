@@ -51,7 +51,7 @@ jobs:
             type: minimal
     packages:
         name: Packages
-        needs: static-checks
+#        needs: static-checks
         uses: ./.github/workflows/ci_packages.yaml
         with:
             type: minimal
