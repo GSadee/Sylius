@@ -2,8 +2,6 @@ Sylius\Component\Core\Model\Product:
     product:
         code: 'PRODUCT'
         channels: ['@channel_web']
-        translations:
-            en_US: '@product_translation'
 
 Sylius\Component\Core\Model\ProductTranslation:
     product_translation:

@@ -45,18 +45,15 @@ Sylius\Component\Core\Model\Taxon:
     category_taxon:
         code: "CATEGORY"
         currentLocale: "en_US"
-        translations: ["@en_category_translation"]
         children: ["@mug_taxon", "@hat_taxon"]
     mug_taxon:
         code: "MUG"
         currentLocale: "en_US"
-        translations: ["@en_mug_taxon_translation"]
         parent: "@category_taxon"
         position: 0
     hat_taxon:
         code: "HAT"
         currentLocale: "en_US"
-        translations: ["@en_hat_translation"]
         parent: "@category_taxon"
         position: 1
 

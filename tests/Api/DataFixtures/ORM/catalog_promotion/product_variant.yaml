@@ -19,8 +19,6 @@ Sylius\Component\Core\Model\ProductVariant:
         position: 1
         channelPricings:
             channel_web: '@product_variant_channel_web_pricing'
-        translations:
-            - '@product_variant_translation'
 
 Sylius\Component\Core\Model\ChannelPricing:
     product_variant_channel_web_pricing:
