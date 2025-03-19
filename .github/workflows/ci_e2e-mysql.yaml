@@ -276,9 +276,10 @@ jobs:
                     php_version: ${{ matrix.php }}
                     symfony_version: ${{ matrix.symfony }}
                     node_version: "20.x"
+                    chrome_version: '133.0.6943.141'
 
             -   name: Install Behat driver
-                run: vendor/bin/bdi detect drivers
+                run: vendor/bin/bdi driver:chromedriver --driver-version=133.0.6943.141
 
             -   name: Run Behat (Panther)
                 run: vendor/bin/behat --colors --strict --no-interaction -vvv -f progress --tags="@javascript&&~@todo&&~@cli" --suite-tags="@hybrid,@ui" features/admin/placing_order_as_impersonated_shop_users.feature
