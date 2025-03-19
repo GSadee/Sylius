@@ -266,7 +266,9 @@ jobs:
             - name: Verify Chrome removal
               run: |
                   which google-chrome && google-chrome --version || echo "Google Chrome successfully removed"
-                  dpkg -L google-chrome-stable
+                  sudo dpkg --remove google-chrome-stable
+                  sudo apt-get purge -y google-chrome-stable
+                  which google-chrome && google-chrome --version || echo "Google Chrome successfully removed"
 
 #            -   name: Uninstall Chrome
 #                run: |
