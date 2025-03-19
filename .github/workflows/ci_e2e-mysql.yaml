@@ -263,6 +263,11 @@ jobs:
                 if: matrix.twig == '^2.12'
                 run: composer require --no-update --no-scripts --no-interaction "twig/twig:${{ matrix.twig }}"
 
+            -   name: Uninstall Chrome
+                run: |
+                    sudo apt-get remove --purge -y google-chrome-stable google-chrome
+                    sudo apt-get autoremove -y && sudo apt-get clean
+
             -   name: Build application
                 uses: SyliusLabs/BuildTestAppAction@v2.3
                 with:
