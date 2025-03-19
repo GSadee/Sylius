@@ -215,7 +215,7 @@ jobs:
 
     behat-ui-js-panther:
         needs: get-matrix
-        runs-on: ubuntu-24.04@c414ecd
+        runs-on: ubuntu-latest
         name: "JS with Panther, PHP ${{ matrix.php }}, Symfony ${{ matrix.symfony }} (${{ matrix.env || 'test_cached' }}), MySQL ${{ matrix.mysql }}, Twig ${{ matrix.twig }}"
         timeout-minutes: 45
         strategy:
@@ -264,7 +264,9 @@ jobs:
                 run: composer require --no-update --no-scripts --no-interaction "twig/twig:${{ matrix.twig }}"
             
             - name: Verify Chrome removal
-              run: which google-chrome && google-chrome --version || echo "Google Chrome successfully removed"
+              run: |
+                  which google-chrome && google-chrome --version || echo "Google Chrome successfully removed"
+                  dpkg -L google-chrome-stable
 
 #            -   name: Uninstall Chrome
 #                run: |
