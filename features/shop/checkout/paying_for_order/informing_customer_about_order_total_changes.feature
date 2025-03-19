@@ -12,7 +12,7 @@ Feature: Informing customer about any order total changes during checkout proces
         And the store ships everywhere for Free
         And the store allows paying Offline
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Informing customer about order total change due to product price change
         Given I am a logged in customer
         And I added product "PHP T-Shirt" to the cart
@@ -21,7 +21,7 @@ Feature: Informing customer about any order total changes during checkout proces
         When I confirm my order
         Then my order should not be placed due to changed order total
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Being able to confirm order after information appears
         Given I am a logged in customer
         And I added product "PHP T-Shirt" to the cart
@@ -30,7 +30,7 @@ Feature: Informing customer about any order total changes during checkout proces
         And I have confirmed order
         Then my order should not be placed due to changed order total
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Informing customer about order total change due to tax change
         Given I am a logged in customer
         And I added product "PHP T-Shirt" to the cart
@@ -39,7 +39,7 @@ Feature: Informing customer about any order total changes during checkout proces
         When I confirm my order
         Then my order should not be placed due to changed order total
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Informing customer about order total change due to shipping method fee change
         Given the store has "UPS" shipping method with "$20.00" fee
         And I added product "PHP T-Shirt" to the cart

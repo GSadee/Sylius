@@ -17,7 +17,7 @@ Feature: Prevent shipping step completion without a selected shipping method
         Then I should see that there is no shipment assigned
         And there should not be any shipping method available to choose
 
-    @no-api @ui @javascript
+    @no-api @ui @mink:chromedriver
     Scenario: Preventing shipping step completion if there are no available shipping methods
         Given the store operates on a single channel in "United States"
         And the store has a product "PHP T-Shirt"
@@ -41,7 +41,7 @@ Feature: Prevent shipping step completion without a selected shipping method
         When I try to complete the shipping step
         Then I should see that this shipping method is not available for this address
 
-    @no-api @ui @javascript
+    @no-api @ui @mink:chromedriver
     Scenario: Preventing shipping step completion if there are no available shipping methods for selected country
         Given the store operates on a channel named "Web"
         And the store operates in "United States"

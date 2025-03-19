@@ -21,7 +21,7 @@ Feature: Seeing shipping methods compatible with categories of units in my cart
         And this shipping method requires at least one unit matches to "Over-sized" shipping category
         And I am a logged in customer
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Seeing shipping methods which match to my units categories
         Given I have product "Star Trek Ship" in the cart
         And I have product "Picasso T-Shirt" in the cart
@@ -32,7 +32,7 @@ Feature: Seeing shipping methods compatible with categories of units in my cart
         And I should see "Raven Post" shipping method
         And I should see "Invisible Post" shipping method
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Not seeing shipping method which not match to my units category
         Given I have product "Star Trek Ship" in the cart
         When I am at the checkout addressing step
@@ -42,7 +42,7 @@ Feature: Seeing shipping methods compatible with categories of units in my cart
         And I should see "Invisible Post" shipping method
         And I should not see "Raven Post" shipping method
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Seeing no shipping methods if any of them match to my units categories
         Given the store has a product "Rocket T-Shirt" priced at "$20.00"
         And I have product "Rocket T-Shirt" in the cart

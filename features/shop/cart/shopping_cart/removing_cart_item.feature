@@ -30,7 +30,7 @@ Feature: Removing cart item from cart
         When I remove product "T-Shirt banana" from the cart
         Then my cart's total should be "$17.22"
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Removing cart item which causes order shipping method recalculation
         Given the store has "Paid" shipping category
         And the store has "Free" shipping category

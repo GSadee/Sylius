@@ -10,7 +10,7 @@ Feature: Order addressing validation
         And the store has a product "PHP T-Shirt" priced at "$19.99"
         And I am a logged in customer
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Address an order without name, city and street
         Given I have product "PHP T-Shirt" in the cart
         And I am at the checkout addressing step
@@ -20,7 +20,7 @@ Feature: Order addressing validation
         And I should also be notified that the "city" and the "street" in shipping details are required
         And I should also be notified that the "postcode" in shipping details is required
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Address an order's billing address without name, city and street
         Given I have product "PHP T-Shirt" in the cart
         And I am at the checkout addressing step

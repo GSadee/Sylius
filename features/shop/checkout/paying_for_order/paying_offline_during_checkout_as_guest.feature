@@ -11,7 +11,7 @@ Feature: Paying Offline during checkout as guest
         And the store ships everywhere for Free
         And the store allows paying Offline
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Successfully placing an order
         Given this payment method is not using Payum
         And I have product "PHP T-Shirt" in the cart
@@ -21,7 +21,7 @@ Feature: Paying Offline during checkout as guest
         And I confirm my order
         Then I should see the thank you page
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Using Payum successfully placing an order
         Given I have product "PHP T-Shirt" in the cart
         When I complete addressing step with email "john@example.com" and "United States" based billing address
@@ -30,7 +30,7 @@ Feature: Paying Offline during checkout as guest
         And I confirm my order
         Then I should see the thank you page
 
-    @no-api @ui @javascript
+    @no-api @ui @mink:chromedriver
     Scenario: Successfully placing an order using custom locale
         Given this payment method is not using Payum
         And I have product "PHP T-Shirt" in the cart
@@ -38,7 +38,7 @@ Feature: Paying Offline during checkout as guest
         And I confirm my order
         Then I should see the thank you page in "French (France)"
 
-    @no-api @ui @javascript
+    @no-api @ui @mink:chromedriver
     Scenario: Using Payum successfully placing an order using custom locale
         Given I have product "PHP T-Shirt" in the cart
         When I proceed through checkout process in the "French (France)" locale with email "john@example.com"

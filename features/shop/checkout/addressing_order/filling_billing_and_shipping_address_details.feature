@@ -10,7 +10,7 @@ Feature: Addressing an order
         And the store ships everywhere for Free
         And I am a logged in customer
 
-    @api @ui @javascript
+    @api @ui @mink:chromedriver
     Scenario: Address an order without different shipping address
         Given I have product "PHP T-Shirt" in the cart
         And I am at the checkout addressing step

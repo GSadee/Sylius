@@ -20,7 +20,7 @@ Feature: Returning to addressing step with a different shipping address
         And I decide to change my address
         Then different shipping address should be checked
 
-    @no-api @ui @javascript
+    @no-api @ui @mink:chromedriver
     Scenario: Going back to addressing step after not submitting a different shipping address
         Given I have product "Summer T-Shirt" in the cart
         And I am at the checkout addressing step
@@ -41,7 +41,7 @@ Feature: Returning to addressing step with a different shipping address
         And I decide to change my address
         And shipping address should be visible
 
-    @no-api @ui @javascript
+    @no-api @ui @mink:chromedriver
     Scenario: Going back to addressing step after not submitting a different shipping address
         Given I have product "Summer T-Shirt" in the cart
         And I am at the checkout addressing step
